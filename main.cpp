@@ -1,8 +1,9 @@
+#include <iostream>
 #include "Hero.h"
 #include "Enemy.h"
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
+#include "showStatus.h"
+
+using namespace std;
 
 int main() {
 
@@ -10,10 +11,11 @@ int main() {
 
     Hero hero("俺", 50, 10, 5);
     Enemy enemy("敵", 40, 8, 4);
-
     char choice;
 
     while (hero.getHP() >= 0 && enemy.getHP() >= 0) {
+
+        showStatus(hero, enemy);
         std::cout << "行動を選択してください(攻撃ならa、回復ならh) > ";
         std::cin >> choice;
 
@@ -34,28 +36,29 @@ int main() {
         }
 
         if (enemy.getHP() > 0) {
+
             int enemyChoice = rand() % 2;
 
             if (enemyChoice == 0) {
+
                 enemy.attack(&hero);
 
             }
             else {
+
                 enemy.heal();
+
             }
-        }
-
-        if (hero.getHP() > 0 && enemy.getHP() > 0) {
-            std::cout << "現在の" << hero.getName() << "のHPは:" << hero.getHP() << "、" << enemy.getName() << "のHPは:" << enemy.getHP() << std::endl;
-
         }
     }
 
     if (enemy.getHP() < 0) {
+
         std::cout << hero.getName() << "の勝ち！" << std::endl;
 
     }
     else {
+
         std::cout << enemy.getName() << "の勝ち！" << std::endl;
 
     }
