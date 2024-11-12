@@ -24,9 +24,6 @@
     <ClCompile Include="Enemy.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="showStatus.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Hero.h">
@@ -34,9 +31,6 @@
     </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="showStatus.h">
-      <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

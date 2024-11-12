@@ -1,9 +1,10 @@
 #include <iostream>
 #include "Hero.h"
 #include "Enemy.h"
-#include "showStatus.h"
 
 using namespace std;
+
+void showStatus(const Hero hero, const Enemy enemy);
 
 int main() {
 
@@ -63,3 +64,12 @@ int main() {
 
     }
 }
+
+
+void showStatus(const Hero hero, const Enemy enemy) {
+
+    cout << "ƒq[ƒ[: " << hero.getName() << " HP: " << hero.getHP() << "  UŒ‚—Í: " << hero.getDef() << endl;
+
+    cout << "“G: " << enemy.getName() << "  HP: " << enemy.getHP() << "  UŒ‚—Í: " << enemy.getDef() << endl;
+}
+
